@@ -44,5 +44,128 @@ This project is ideal for students learning **Java Full Stack (JFS)** and **data
 | **IntelliJ IDEA** | IDE for coding and execution |
 
 ---
+🔎 How to Run the Project --- Step-by-Step
+========================================
+
+### ✅ Step 1 --- Install Required Software
+
+Make sure these tools are already installed:
+
+-   Java JDK 21 (or higher)
+
+-   IntelliJ IDEA (Ultimate/Community)
+
+-   MySQL Server 8.0+
+
+-   MySQL Workbench or XAMPP (optional)
+
+-   MySQL Connector/J (JDBC Driver)
+
+* * * * *
+
+### ✅ Step 2 --- Download/Clone the Project
+
+If using GitHub:
+
+`git clone https://github.com/<your-username>/Complaint-Management-System.git`
+
+Or manually download the ZIP and extract it.
+
+* * * * *
+
+### ✅ Step 3 --- Open the Project in IntelliJ IDEA
+
+📌 Go to:
+
+`File → Open → Select Project Folder → OK`
+
+* * * * *
+
+### ✅ Step 4 --- Create MySQL Database
+
+Open MySQL Workbench → Run this SQL:
+
+`CREATE DATABASE complaintdb;
+
+USE complaintdb;
+
+CREATE TABLE complaints (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    complaint TEXT
+);`
+
+* * * * *
+
+### ✅ Step 5 --- Add MySQL Connector Library
+
+Go to:
+
+`File → Project Structure → Modules → Dependencies → + Add JAR`
+
+Select:
+
+`mysql-connector-j-xxx.jar`
+
+Click:
+
+`Apply → OK ✅`
+
+* * * * *
+
+### ✅ Step 6 --- Configure Database Credentials
+
+In `DBConnectionTest.java` and `ComplaintManagementSystem.java`, verify:
+
+`String url = "jdbc:mysql://localhost:3306/complaintdb";
+String user = "root";
+String password = "yourpassword"; // Set your MySQL password`
+
+* * * * *
+
+### ✅ Step 7 --- Test DB Connection
+
+Right-click → **Run `DBConnectionTest`**
+
+Expected output:
+
+`✅ Connected to MySQL successfully!`
+
+If not → Check username/password/MySQL service running
+
+* * * * *
+
+### ✅ Step 8 --- Run the Main Application
+
+Right-click on:
+
+`ComplaintManagementSystem.java`
+
+Then select:
+
+`Run ComplaintManagementSystem.main()`
+
+* * * * *
+
+### ✅ Step 9 --- Use the Menu Options
+
+You will see:
+
+=== Complaint Management System ===
+1. Add Complaint
+2. View Complaints
+3. Exit`
+
+Enter:
+
+-   `1` → Add a complaint ✅
+
+-   `2` → Show all complaints ✅
+
+-   `3` → Exit ❌
+
+* * * * *
+
+### DONE! Complaining System is Sunning Successfully ✅
 
 
